@@ -13,7 +13,7 @@ echo "AWS Account ID: $AWS_ACCOUNT_ID"
 
 
 echo "Creating S3 bucket: $S3BucketName"
-export S3BucketName="cloudformation-cheker-bruvio-${AWS_ACCOUNT_ID}"
+export S3BucketName="cloudformation-checker-bruvio-${AWS_ACCOUNT_ID}"
 
 
 echo "bucket names used for testing:"
