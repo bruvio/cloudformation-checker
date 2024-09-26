@@ -116,14 +116,18 @@ aws cloudformation delete-stack --stack-name MyInvalidS3BucketStack --region eu-
 
 ## Additional Notes
 
+    
     Error Handling: The script includes error handling for bucket creation and stack deployment.
+    
     Modular Templates: The CloudFormation templates are modular and can be reused or modified for other purposes.
+    
     Learning Tool: This repository serves as a practical example for learning about CloudFormation stack deployments and troubleshooting, and is not in a production-ready state, use at your own risk.
 
 ## License
 
 This project is open-source and available under the MIT License.
 
-## Contact
 
-For questions or support, please open an issue on the repository or contact bruvio.
+## Author
+
+- **bruvioq** - _Initial work_ - [bruvio](https://github.com/bruvio)
