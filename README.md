@@ -81,6 +81,10 @@ This script will:
     Deploy a valid S3 bucket stack (MyS3BucketStack).
     Deploy an invalid S3 bucket stack (MyInvalidS3BucketStack) to trigger a failure.
 
+
+you should see something like ![this](/screenshots/deploy.png?raw=true "Infra Deployment")
+
+
 ### 6. Check Stack Statuses (Optional)
 
 Use the Python script to check the status of the stacks:
@@ -91,6 +95,13 @@ python cf_status_checker.py ParentStack --region eu-west-2
 python cf_status_checker.py MyS3BucketStack --region eu-west-2
 python cf_status_checker.py MyInvalidS3BucketStack --region eu-west-2
 ```
+
+you should see something like
+
+![this](/screenshots/check-nested.png?raw=true "Checking the nested stack")
+![this](/screenshots/check-good.png?raw=true "Checking the correct S3 bucket stack")
+![this](/screenshots/check-bad.png?raw=true "Checking the invalid S3 bucket stack")
+
 ### 7. Clean Up Resources
 
 After testing, delete the stacks to avoid unnecessary charges:
@@ -101,6 +112,7 @@ aws cloudformation delete-stack --stack-name ParentStack --region eu-west-2
 aws cloudformation delete-stack --stack-name MyS3BucketStack --region eu-west-2
 aws cloudformation delete-stack --stack-name MyInvalidS3BucketStack --region eu-west-2
 ```
+
 
 ## Additional Notes
 
