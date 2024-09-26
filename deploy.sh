@@ -119,13 +119,15 @@ echo "done"
 
 return
 
-
+echo ""
 echo "checking the nested stack"
 python cf_status_checker.py ParentStack --region eu-west-2
 
+echo ""
 echo "checking the good bucket stack"
 python cf_status_checker.py MyS3BucketStack --region eu-west-2
 
+echo ""
 echo "checking the invalid bucket stack"
 python cf_status_checker.py MyInvalidS3BucketStack --region eu-west-2
 
