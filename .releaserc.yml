@@ -9,7 +9,7 @@ tagFormat:
   - ${version}
 branches:
   - "+([0-9])?(.{+([0-9]),x}).x"
-  - devop
+  - master
   - next
   - next-major
   - name: beta
