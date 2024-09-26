@@ -1,0 +1,17 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Nested Stack 1 with an S3 bucket using parameters
+
+Parameters:
+  S3BucketName:
+    Description: Name of the S3 bucket for Nested Stack 1
+    Type: String
+    MinLength: 3
+    MaxLength: 63
+    AllowedPattern: "^[a-z0-9.-]*$"
+    ConstraintDescription: "Must be a lowercase alphanumeric string with dots or hyphens"
+
+Resources:
+  MyNestedS3Bucket1:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Ref S3BucketName

@@ -1,0 +1,41 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Parent stack with three nested stacks using parameters
+
+Parameters:
+  S3BucketName:
+    Description: Name of the S3 bucket where nested templates are stored
+    Type: String
+
+  NestedStack1BucketName:
+    Description: S3 Bucket name for Nested Stack 1
+    Type: String
+
+  NestedStack2TableName:
+    Description: DynamoDB Table name for Nested Stack 2
+    Type: String
+
+  NestedStack3BucketName:
+    Description: S3 Bucket name for Nested Stack 3
+    Type: String
+
+Resources:
+  NestedStack1:
+    Type: AWS::CloudFormation::Stack
+    Properties:
+      TemplateURL: !Sub "https://${S3BucketName}.s3.${AWS::Region}.amazonaws.com/nested-stack-1.yml"
+      Parameters:
+        S3BucketName: !Ref NestedStack1BucketName
+
+  NestedStack2:
+    Type: AWS::CloudFormation::Stack
+    Properties:
+      TemplateURL: !Sub "https://${S3BucketName}.s3.${AWS::Region}.amazonaws.com/nested-stack-2.yml"
+      Parameters:
+        DynamoDBTableName: !Ref NestedStack2TableName
+
+  NestedStack3:
+    Type: AWS::CloudFormation::Stack
+    Properties:
+      TemplateURL: !Sub "https://${S3BucketName}.s3.${AWS::Region}.amazonaws.com/nested-stack-3.yml"
+      Parameters:
+        S3BucketName: !Ref NestedStack3BucketName
