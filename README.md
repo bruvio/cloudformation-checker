@@ -130,4 +130,4 @@ This project is open-source and available under the MIT License.
 
 ## Author
 
-- **bruvioq** - _Initial work_ - [bruvio](https://github.com/bruvio)
+- **bruvio** - _Initial work_ - [bruvio](https://github.com/bruvio)
