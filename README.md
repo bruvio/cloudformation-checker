@@ -1,4 +1,4 @@
-# CloudFormation Checker
+9# CloudFormation Checker
 
 ## Overview
 
@@ -85,7 +85,7 @@ This script will:
 you should see something like ![this](/screenshots/deploy.png?raw=true "Infra Deployment")
 
 
-### 6. Check Stack Statuses (Optional)
+### 6. Check Stack Statuses
 
 Use the Python script to check the status of the stacks:
 
